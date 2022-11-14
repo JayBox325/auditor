@@ -20,6 +20,10 @@ function MyApp({ Component, pageProps }) {
             emissions: emissions,
             setEmissions: setEmissions
         }}>
+            <Head>
+                <title>Another auditor</title>
+                <meta name="description" content="This is another website auditor" />
+            </Head>
             <Component {...pageProps} />
         </AuditConfContext.Provider>
     )

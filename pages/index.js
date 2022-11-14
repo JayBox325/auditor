@@ -19,7 +19,7 @@ const Index = (props) => {
                 </div>
 
                 <div className="col-span-6 lg:col-span-14 xl:col-span-16">
-                    <div className="min-h-[2000px]">
+                    <div className="">
                         {emissions ? (
                             <div className="grid grid-cols-6 lg:grid-cols-12 gap-8">
 
