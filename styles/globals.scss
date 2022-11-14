@@ -1,0 +1,10 @@
+@tailwind base;
+
+*:focus {
+    outline: none;
+}
+
+@import './form.scss';
+@import './panel.scss';
+
+@tailwind utilities;

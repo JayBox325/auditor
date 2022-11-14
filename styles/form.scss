@@ -1,0 +1,12 @@
+input[type=range]::-webkit-slider-thumb {
+    @apply bg-indigo-500 appearance-none w-6 h-6 rounded-full;
+}
+
+input,
+select {
+    @apply w-full h-12 rounded-md transition px-4 appearance-none bg-neutral-700 text-neutral-200 border-2 border-neutral-700 focus-within:border-amber-500 xl:h-14;
+}
+
+.btn {
+    @apply text-lg w-full leading-tight text-white transition rounded-md px-4 h-18 border-4 border-indigo-500 focus-visible:border-amber-500;
+}
