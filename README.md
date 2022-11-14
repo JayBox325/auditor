@@ -10,3 +10,6 @@ Powerful sustainability auditor for designers, content authors and developers al
 - [ ] Ability to analyise an image file and conclude if it has been compressed or not then suggest TinyPNG or something to compress it
 - [ ] Add testing with other models
 - [ ] Add throttling to perform test on 20 year old computer and 10 year old computer
+- [ ] Store that current user's session in local storage so they can hop between 3 or 4 comparisons in that session
+- [ ] Explore the need for longer term cookie storage for a user's historical estimates
+- [ ] Add a 'compare' feature where the user can directly compare up to three estimates
