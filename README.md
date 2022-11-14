@@ -13,3 +13,4 @@ Powerful sustainability auditor for designers, content authors and developers al
 - [ ] Store that current user's session in local storage so they can hop between 3 or 4 comparisons in that session
 - [ ] Explore the need for longer term cookie storage for a user's historical estimates
 - [ ] Add a 'compare' feature where the user can directly compare up to three estimates
+- [ ] Add ability to select your data size test (some users might know the MB and won't want to translate it into KB, UX feature)
