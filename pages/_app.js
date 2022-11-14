@@ -1,6 +1,7 @@
 import '@/styles/globals.scss'
 import AuditConfContext from '@/utils/context/AuditConfContext'
 import { useState } from 'react'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
     const [auditConfig, setAuditConfig] = useState({
