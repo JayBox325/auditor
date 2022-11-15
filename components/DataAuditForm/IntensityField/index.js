@@ -66,7 +66,7 @@ function IntensityField(props) {
                                 )
                             })}
                         </select>
-                        <span className="pointer-events-none absolute z-20 right-3 h-11/12 top-1/2 -translate-y-1/2 flex items-center justify-center pr-1 pl-4 text-gray-500 text-sm bg-gradient-to-l from-neutral-700 via-neutral-700">&darr;</span>
+                        <span className="pointer-events-none absolute z-20 right-3 h-11/12 top-1/2 -translate-y-1/2 flex items-center justify-center pr-1 pl-4 text-neutral-300 text-sm bg-gradient-to-l from-neutral-700 via-neutral-700">&darr;</span>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ function IntensityField(props) {
                 <div className="w-full h-12 xl:h-14 rounded-b-md md:rounded-r-md md:rounded-l-none px-4 bg-neutral-600 inline-flex items-center justify-center">
                     <div className="w-full inline-flex items-end justify-between">
                         <span>{auditConfig.intensity.value}</span>
-                        <span className="text-xs text-neutral-400 inline-block ml-1">kWh</span>
+                        <span className="text-xs text-neutral-300 inline-block ml-1">kWh</span>
                     </div>
                 </div>
             </div>

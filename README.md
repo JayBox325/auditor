@@ -14,3 +14,5 @@ Powerful sustainability auditor for designers, content authors and developers al
 - [ ] Explore the need for longer term cookie storage for a user's historical estimates
 - [ ] Add a 'compare' feature where the user can directly compare up to three estimates
 - [ ] Add ability to select your data size test (some users might know the MB and won't want to translate it into KB, UX feature)
+- [ ] Review design
+- [ ] Come up with a name

@@ -34,7 +34,7 @@ function SizeField(props) {
                     inputMode="numeric"
                     onChange={validateNumbers}
                 />
-                <span className="pointer-events-none absolute z-30 right-4 bottom-2 text-neutral-400 text-xs">KB</span>
+                <span className="pointer-events-none absolute z-30 right-4 bottom-2 text-neutral-300 text-xs">KB</span>
             </div>
         </div>
     )
