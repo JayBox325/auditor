@@ -16,3 +16,4 @@ Powerful sustainability auditor for designers, content authors and developers al
 - [ ] Add ability to select your data size test (some users might know the MB and won't want to translate it into KB, UX feature)
 - [ ] Review design
 - [ ] Come up with a name
+- [x] Restructure form so it uses HTML5 form elements
