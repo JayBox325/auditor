@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html className="bg-neutral-500">
+    <Html className="bg-neutral-900">
       <Head>
       </Head>
       <body>
