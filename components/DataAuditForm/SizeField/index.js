@@ -10,7 +10,7 @@ function SizeField(props) {
     } = auditConfValue || {}
 
     function validateNumbers(e) {
-        console.log('on change')
+        // console.log('on change')
         const value = e.target.value.replace(/\D/g, "")
 
         // Set the numeric value in the field

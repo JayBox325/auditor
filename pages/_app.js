@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     const [auditConfig, setAuditConfig] = useState({
         size: null,
         intensity: {
-            name: 'World',
+            name: 'Global',
             value: 442
         },
         returning: 25

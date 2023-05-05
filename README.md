@@ -17,3 +17,7 @@ Powerful sustainability auditor for designers, content authors and developers al
 - [ ] Review design
 - [ ] Come up with a name
 - [x] Restructure form so it uses HTML5 form elements
+- [x] Add ability to select the % of returning users
+- [ ] Rebuild so it works on all browsers/devices
+- [ ] Add a green hosting checkbox (in progress...)
+- [ ] Add a warning/validation error if someone presses enter and tries to submit the form without the size added

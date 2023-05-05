@@ -1,9 +1,10 @@
 import IntensityField from "./IntensityField"
 import ReturningField from "./ReturningField"
 import SizeField from "./SizeField"
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import AuditConfContext from '@/utils/context/AuditConfContext'
 import runAudit from "@/utils/helpers/runAudit";
+import GreenHostingField from "./GreenHostingField";
 
 function DataAuditForm(props) {
     const auditConfValue = useContext(AuditConfContext)
@@ -17,7 +18,9 @@ function DataAuditForm(props) {
     // Run the audit
     function submitAudit(e) {
         e.preventDefault()
-        runAudit(auditConfig, setEmissions)
+        if(auditConfig.size) {
+            runAudit(auditConfig, setEmissions, )
+        }
     }
 
     return (
@@ -38,12 +41,18 @@ function DataAuditForm(props) {
                             <div className="col-span-6 md:col-span-7 lg:col-span-12">
                                 <IntensityField />
                             </div>
+                            <div className="col-span-6 md:col-span-7 lg:col-span-12">
+                                <ReturningField />
+                            </div>
+                            <div className="col-span-6 md:col-span-7 lg:col-span-12">
+                                <GreenHostingField />
+                            </div>
 
-                            {/* <ReturningField /> */}
                         </div>
                     </div>
 
                     <div className="text-sm leading-tight text-gray-500">
+
                         {/* <ul>
                             <li>Size: {auditConfig.size}</li>
                             <li>Grid Intensity: {auditConfig.intensity.name} ({auditConfig.intensity.value})</li>

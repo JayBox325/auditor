@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import AuditConfContext from '@/utils/context/AuditConfContext'
 import DataAuditForm from "@/components/DataAuditForm";
 import EmissionStat from "@/components/EmissionStat";
@@ -8,6 +8,10 @@ const Index = (props) => {
     const {
         emissions
     } = auditConfValue || {}
+
+    useEffect(()=>{
+        // console.log('context updated', emissions)
+    },[emissions])
 
     return (
         <div className="p-6 lg:p-[3vw] bg-neutral-900 text-neutral-300">

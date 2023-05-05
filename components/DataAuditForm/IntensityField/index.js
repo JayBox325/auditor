@@ -1,19 +1,17 @@
 import GRID_INTENSITIES from "@/utils/data/gridIntensities"
-import { useState, useContext } from "react"
+import { useState, useContext, Fragment, useRef } from "react"
 import AuditConfContext from '@/utils/context/AuditConfContext'
+import IntensityItem from "@/components/IntensityItem"
 
 function IntensityField(props) {
     const [currValue, setCurrValue] = useState()
     const auditConfValue = useContext(AuditConfContext)
+    const intensityField = useRef(null)
 
     const {
         auditConfig,
         setAuditConfig
     } = auditConfValue || {}
-
-    const {
-        intensityField
-    } = props || {}
 
     function handleChange(e) {
         const selected = e.target.value.split('||')
@@ -30,16 +28,36 @@ function IntensityField(props) {
         } })
     }
 
-    const grids = GRID_INTENSITIES
+    function reset() {
+        intensityField.current.selectedIndex = 0
+        const selected = intensityField.current.value.split('||')
 
-    const defaultGrid = grids.find((e) => e.name == 'World')
+        const gridLocation = selected[0]
+        const gridValue = parseInt(selected[1])
+
+        setCurrValue(gridValue)
+
+        // // Updating the config
+        setAuditConfig({ ...auditConfig, 'intensity': {
+            name: gridLocation,
+            value: gridValue
+        } })
+    }
+
+    const grids = GRID_INTENSITIES
+    const defaultGrid = grids[0].items[0]
     const defaultValue = `${defaultGrid.name}||${defaultGrid.emissions_intensity_gco2_per_kwh}`
 
     return (
         <div className="grid grid-cols-6 items-end w-full">
 
-            <div className="col-span-6">
-                <label htmlFor="carbon-intensity" className="leading-none block mb-2 w-full">Carbon intensity:</label>
+            <div className="col-span-6 flex flex-row items-end justify-between mb-2">
+                <div className="">
+                    <label htmlFor="carbon-intensity" className="leading-none block w-full">Carbon intensity:</label>
+                </div>
+                <div className="">
+                    <button onClick={()=>{reset()}} className="underline text-xxs underline-offset-2 text-gray-400 hover:text-white transition-color">Reset to global</button>
+                </div>
             </div>
 
             <div className="col-span-6 md:col-span-4">
@@ -52,18 +70,27 @@ function IntensityField(props) {
                             onChange={handleChange}
                             defaultValue={defaultValue}
                         >
-                            {grids.map((grid, n) => {
-                                const {
-                                    name,
-                                    short_name,
-                                    emissions_intensity_gco2_per_kwh
-                                } = grid || {}
+                            
+                            {grids.map((group, n) => {
 
-                                const value = `${name}||${emissions_intensity_gco2_per_kwh}`
+                                if (!group.label) {
+                                    const item = group.items[0]
 
-                                return (
-                                    <option key={n} value={value}>{short_name ?? name}</option>
-                                )
+                                    return (
+                                        <Fragment key={n}>
+                                            <IntensityItem item={item} />
+                                        </Fragment>
+                                    )
+                                } else {
+
+                                    return (
+                                        <optgroup key={n} label={group.label}>
+                                            {group.items.map((item, n) => (
+                                                <IntensityItem key={n} item={item} />
+                                            ))}
+                                        </optgroup>
+                                    )
+                                }
                             })}
                         </select>
                         <span className="pointer-events-none absolute z-20 right-3 h-11/12 top-1/2 -translate-y-1/2 flex items-center justify-center pr-1 pl-4 text-neutral-300 text-sm bg-gradient-to-l from-neutral-700 via-neutral-700">&darr;</span>
