@@ -10,7 +10,8 @@ function MyApp({ Component, pageProps }) {
             name: 'Global',
             value: 442
         },
-        returning: 25
+        greenHosting: false,
+        returning: 0.25
     })
     const [emissions, setEmissions] = useState(null)
 

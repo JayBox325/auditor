@@ -31,7 +31,7 @@ function DataAuditForm(props) {
                     <div>
                         <div className="mb-8 ">
                             <h1 className="font-medium text-3xl mb-4 leading-none">Auditor</h1>
-                            <p>Consectetur aute tempor minim eiusmod proident ea nulla ex. Excepteur non ipsum ea cupidatat et voluptate pariatur Lorem nulla sunt magna enim nostrud pariatur. Eu qui labore dolor voluptate reprehenderit id nisi enim.</p>
+                            <p>Consectetur aute tempor minim eiusmod proident ea nulla ex.</p>
                         </div>
                         <div className="grid grid-cols-6 gap-6 md:grid-cols-12">
 
@@ -57,6 +57,7 @@ function DataAuditForm(props) {
                             <li>Size: {auditConfig.size}</li>
                             <li>Grid Intensity: {auditConfig.intensity.name} ({auditConfig.intensity.value})</li>
                             <li>Returning: {auditConfig.returning}%</li>
+                            <li>Green Hosting: {auditConfig.greenHosting ? 'True' : 'False'}</li>
                         </ul> */}
 
                         <div className="mt-6">

@@ -56,7 +56,7 @@ function IntensityField(props) {
                     <label htmlFor="carbon-intensity" className="leading-none block w-full">Carbon intensity:</label>
                 </div>
                 <div className="">
-                    <button onClick={()=>{reset()}} className="underline text-xxs underline-offset-2 text-gray-400 hover:text-white transition-color">Reset to global</button>
+                    <button onClick={()=>{reset()}} className="underline text-xxs underline-offset-2 text-gray-400 hover:text-white focus-visible:text-white focus-visible:border-amber-500 focus-visible:border-b-2 transition-color">Reset to global</button>
                 </div>
             </div>
 

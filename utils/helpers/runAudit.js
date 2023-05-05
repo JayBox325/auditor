@@ -7,7 +7,7 @@ function runAudit(auditConfig, setEmissions) {
 
     const perVisit = formula.perVisitTrace(
         (auditConfig.size * 1000),                          // file size
-        false,                                              // green hosting
+        auditConfig.greenHosting,                           // green hosting
         {
             gridIntensity: {
                 device: auditConfig.intensity.value,        // Grid intensity value
