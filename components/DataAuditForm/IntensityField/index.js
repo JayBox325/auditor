@@ -56,7 +56,7 @@ function IntensityField(props) {
                     <label htmlFor="carbon-intensity" className="leading-none block w-full">Carbon intensity:</label>
                 </div>
                 <div className="">
-                    <button onClick={()=>{reset()}} className="underline text-xxs underline-offset-2 text-gray-400 hover:text-white focus-visible:text-white focus-visible:border-amber-500 focus-visible:border-b-2 transition-color">Reset to global</button>
+                    <button onClick={()=>{reset()}} className="underline text-xxs underline-offset-2 text-neutral-400 hover:text-neutral-800 focus-visible:border-amber-500 focus-visible:border-b-2 transition-color">Reset to global</button>
                 </div>
             </div>
 
@@ -93,16 +93,16 @@ function IntensityField(props) {
                                 }
                             })}
                         </select>
-                        <span className="pointer-events-none absolute z-20 right-3 h-11/12 top-1/2 -translate-y-1/2 flex items-center justify-center pr-1 pl-4 text-neutral-300 text-sm bg-gradient-to-l from-neutral-700 via-neutral-700">&darr;</span>
+                        <span className="pointer-events-none absolute z-20 right-3 h-11/12 top-1/2 -translate-y-1/2 flex items-center justify-center pr-1 pl-4 text-neutral-800 text-sm bg-gradient-to-l from-neutral-200 via-neutral-200">&darr;</span>
                     </div>
                 </div>
             </div>
 
             <div className="col-span-6 md:col-span-2">
-                <div className="w-full h-12 xl:h-14 rounded-b-md md:rounded-r-md md:rounded-l-none px-4 bg-neutral-600 inline-flex items-center justify-center">
+                <div className="w-full h-12 xl:h-14 rounded-b-md md:rounded-r-md md:rounded-l-none px-4 bg-neutral-300 inline-flex items-center justify-center">
                     <div className="w-full inline-flex items-end justify-between">
                         <span>{auditConfig.intensity.value}</span>
-                        <span className="text-xs text-neutral-300 inline-block ml-1">kWh</span>
+                        <span className="text-xs text-neutral-500 inline-block ml-1">kWh</span>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ function SizeField(props) {
                 <input
                     id="file-size"
                     placeholder="100"
-                    className={`relative z-20 ${auditConfig.size ? '' : 'border-2 border-indigo-500'}`}
+                    className={`relative z-20 ${auditConfig.size ? '' : 'border-2 border-green-500'}`}
                     type="text"
                     inputMode="numeric"
                     onChange={validateNumbers}

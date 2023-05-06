@@ -33,7 +33,7 @@ function GreenHostingField(props) {
             </div>
             <div htmlFor="green-hosting" className="pl-4 flex flex-col">
                 <label htmlFor='green-hosting' className="leading-none inline-block "><span className="mr-1">🌿</span> Using green hosting</label>
-                <p className="text-xs text-gray-400 mt-2">Something here about green hosting lorem ipsum set amet. Something here about green <a href="/" className="hover:text-white ">hosting lorem</a> ipsum set amet.</p>
+                <p className="text-xs text-gray-400 mt-2">Something here about green hosting lorem ipsum set amet. Green <a href="/" className="hover:text-white ">hosting lorem</a> ipsum set amet.</p>
             </div>
         </div>
     )

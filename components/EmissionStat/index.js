@@ -16,7 +16,7 @@ function EmissionStat(props) {
         <div className={`panel`}>
             <h3 className="text-base leading-tight text-neutral-300 font-medium mb-1 md:text-xs">{label}:</h3>
             <p className="flex flex-row justify-between items-end md:block lg:flex">
-                <span className="text-indigo-500 leading-none font-medium text-[12vw] md:text-[5vw] lg:text-[8vw] xl:text-[3.2vw]">{formattedValue}</span>
+                <span className="text-green-500 leading-none font-medium text-[12vw] md:text-[5vw] lg:text-[8vw] xl:text-[3.2vw]">{formattedValue}</span>
                 <span className="text-neutral-400 md:block text-xs ml-1">{unit}</span>
             </p>
         </div>

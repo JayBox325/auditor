@@ -19,7 +19,11 @@ const Index = (props) => {
             <div className="grid grid-cols-6 lg:grid-cols-24 h-full gap-8">
 
                 <div className="col-span-6 lg:col-span-10 xl:col-span-8">
-                    <DataAuditForm />
+                    <div className="panel h-auto lg:h-[calc(100vh_-_6vw)] sticky top-[3vw] flex flex-col">
+                        <div className="h-full">
+                            <DataAuditForm />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="col-span-6 lg:col-span-14 xl:col-span-16">
@@ -32,7 +36,7 @@ const Index = (props) => {
                                         <div className="xl:flex flex-row justify-between items-center">
                                             <h3 className="text-base md:text-lg leading-tight text-neutral-400 font-medium text-neutral-200 mb-1 lg:mb-0">Emissions produced<br className="hidden lg:inline"/> for a single visit:</h3>
                                             <p className="flex flex-row justify-between items-end">
-                                                <span className="text-indigo-500 leading-none font-medium text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw]">{new Intl.NumberFormat('en-US',{minimumFractionDigits: 6, maximumFractionDigits: 6}).format(emissions.perVisit)}</span>
+                                                <span className="text-green-500 leading-none font-medium text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw]">{new Intl.NumberFormat('en-US',{minimumFractionDigits: 6, maximumFractionDigits: 6}).format(emissions.perVisit)}</span>
                                                 <span className="text-neutral-400 text-xs ml-1">gCO2e</span>
                                             </p>
                                         </div>

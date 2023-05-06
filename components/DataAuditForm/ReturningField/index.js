@@ -24,7 +24,7 @@ function ReturningField(props) {
         <div className="relative ">
             <div className="flex justify-between">
                 <label htmlFor="returning-visitors" className="block mb-2">Returning visitors</label>
-                <span className="text-indigo-500">{auditConfig.returning}%</span> 
+                <span className="text-green-500">{auditConfig.returning}%</span> 
             </div>
             <input
                 id="returning-visitors"
