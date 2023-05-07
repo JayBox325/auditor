@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
             value: 442
         },
         greenHosting: false,
-        returning: 0.25
+        returning: 25
     })
     const [emissions, setEmissions] = useState(null)
 

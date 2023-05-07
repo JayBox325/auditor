@@ -4,12 +4,16 @@
     outline: none;
 }
 
-@import './form.scss';
-@import './checkmark.scss';
-@import './typography.scss';
-@import './panel.scss';
+@import './mixins/polyfluid-sizing.scss';
+
+@import './typography/headings.scss';
+@import './typography/rich.scss';
 
 @import './layout/container.scss';
 @import './layout/row.scss';
+
+@import './form.scss';
+@import './checkmark.scss';
+@import './panel.scss';
 
 @tailwind utilities;

@@ -1,4 +1,4 @@
-import { co2, CO2, averageIntensity } from '@tgwf/co2'
+import { co2 } from '@tgwf/co2'
 
 function runAudit(auditConfig, setEmissions) {
     const formula = new co2()

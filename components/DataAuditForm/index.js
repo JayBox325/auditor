@@ -5,9 +5,11 @@ import { useContext } from "react";
 import AuditConfContext from '@/utils/context/AuditConfContext'
 import runAudit from "@/utils/helpers/runAudit"
 import GreenHostingField from "./GreenHostingField"
+import { useRouter } from 'next/router'
 
 function DataAuditForm(props) {
     const auditConfValue = useContext(AuditConfContext)
+    const router = useRouter()
 
     // Get context data
     const {
@@ -18,6 +20,7 @@ function DataAuditForm(props) {
     // Run the audit
     function submitAudit(e) {
         e.preventDefault()
+        router.push('/result')
         if(auditConfig.size) {
             runAudit(auditConfig, setEmissions, )
         }
@@ -27,7 +30,7 @@ function DataAuditForm(props) {
 
         <form onSubmit={submitAudit} className="flex flex-col justify-between h-full">
             <div>
-                <div className="grid grid-cols-6 gap-6 md:grid-cols-12">
+                <div className="grid grid-cols-6 gap-6 xl:gap-8 md:grid-cols-12">
 
                     <div className="col-span-6 md:col-span-12">
                         <SizeField/>

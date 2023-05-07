@@ -11,7 +11,7 @@ function GreenHostingField(props) {
     } = auditConfValue || {}
 
     const {
-        returningField
+        isBanner
     } = props || {}
 
     function handleChange(e) {
@@ -28,12 +28,12 @@ function GreenHostingField(props) {
             <div className="relative">
                 <input onChange={handleChange} className="w-8 h-8 p-0 relative z-10" type="checkbox" id="green-hosting" />
                 <svg className="absolute w-8 h-8 pointer-events-none top-0 left-0 z-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                    <path className={`checkmark stroke-white ${isChecked ? 'is-checked' : ''}`} fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    <path className={`checkmark stroke-green-500 ${isChecked ? 'is-checked' : ''}`} fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                 </svg>
             </div>
             <div htmlFor="green-hosting" className="pl-4 flex flex-col">
-                <label htmlFor='green-hosting' className="leading-none inline-block "><span className="mr-1">🌿</span> Using green hosting</label>
-                <p className="text-xs text-gray-400 mt-2">Something here about green hosting lorem ipsum set amet. Green <a href="/" className="hover:text-white ">hosting lorem</a> ipsum set amet.</p>
+                <label htmlFor='green-hosting' className="form__label">Using green hosting</label>
+                <p className="form__desc">Something here about green hosting lorem ipsum set amet. Green <a href="/" className="hover:text-white ">hosting lorem</a> ipsum set amet.</p>
             </div>
         </div>
     )

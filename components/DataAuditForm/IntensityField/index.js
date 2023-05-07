@@ -13,6 +13,10 @@ function IntensityField(props) {
         setAuditConfig
     } = auditConfValue || {}
 
+    const {
+        isBanner
+    } = props || {}
+
     function handleChange(e) {
         const selected = e.target.value.split('||')
 
@@ -22,10 +26,12 @@ function IntensityField(props) {
         setCurrValue(gridValue)
 
         // // Updating the config
-        setAuditConfig({ ...auditConfig, 'intensity': {
-            name: gridLocation,
-            value: gridValue
-        } })
+        setAuditConfig({
+            ...auditConfig, 'intensity': {
+                name: gridLocation,
+                value: gridValue
+            }
+        })
     }
 
     function reset() {
@@ -38,10 +44,12 @@ function IntensityField(props) {
         setCurrValue(gridValue)
 
         // // Updating the config
-        setAuditConfig({ ...auditConfig, 'intensity': {
-            name: gridLocation,
-            value: gridValue
-        } })
+        setAuditConfig({
+            ...auditConfig, 'intensity': {
+                name: gridLocation,
+                value: gridValue
+            }
+        })
     }
 
     const grids = GRID_INTENSITIES
@@ -51,13 +59,16 @@ function IntensityField(props) {
     return (
         <div className="grid grid-cols-6 items-end w-full">
 
-            <div className="col-span-6 flex flex-row items-end justify-between mb-2">
-                <div className="">
-                    <label htmlFor="carbon-intensity" className="leading-none block w-full">Carbon intensity:</label>
+            <div className="col-span-6 flex flex-row items-end justify-between">
+                <div className="pb-4">
+                    <label htmlFor="carbon-intensity" className="form__label">Carbon Intensity:</label>
+                    {!isBanner ? (
+                        <p className="form__desc">Dolor dolor veniam esse reprehenderit nostrud voluptate dolor amet exercitation. Et est dolor quis proident dolor cillum.</p>
+                    ) : ""}
                 </div>
-                <div className="">
-                    <button onClick={()=>{reset()}} className="underline text-xxs underline-offset-2 text-neutral-400 hover:text-neutral-800 focus-visible:border-amber-500 focus-visible:border-b-2 transition-color">Reset to global</button>
-                </div>
+                {/* <div className="">
+                    <button onClick={() => { reset() }} className="underline text-xxs underline-offset-2 text-neutral-400 hover:text-neutral-800 focus-visible:border-amber-500 focus-visible:border-b-2 transition-color">Reset to global</button>
+                </div> */}
             </div>
 
             <div className="col-span-6 md:col-span-4">
@@ -70,7 +81,7 @@ function IntensityField(props) {
                             onChange={handleChange}
                             defaultValue={defaultValue}
                         >
-                            
+
                             {grids.map((group, n) => {
 
                                 if (!group.label) {
@@ -101,14 +112,14 @@ function IntensityField(props) {
             <div className="col-span-6 md:col-span-2">
                 <div className="w-full h-12 xl:h-14 rounded-b-md md:rounded-r-md md:rounded-l-none px-4 bg-neutral-300 inline-flex items-center justify-center">
                     <div className="w-full inline-flex items-end justify-between">
-                        <span>{auditConfig.intensity.value}</span>
+                        <span className="text-neutral-800">{auditConfig.intensity.value}</span>
                         <span className="text-xs text-neutral-500 inline-block ml-1">kWh</span>
                     </div>
                 </div>
             </div>
         </div>
     )
-        
+
 }
 
 export default IntensityField

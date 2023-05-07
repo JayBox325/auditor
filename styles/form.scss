@@ -10,3 +10,11 @@ select {
 .btn {
     @apply text-lg w-full leading-tight text-white transition rounded-md px-4 h-18 border-4 border-green-500 focus-visible:border-amber-500;
 }
+
+.form__label {
+    @apply font-bold text-lg;
+}
+
+.form__desc {
+    @apply text-gray-400 leading-tight text-sm max-w-lg mt-1;
+}
