@@ -3,8 +3,6 @@ import { co2 } from '@tgwf/co2'
 function runAudit(auditConfig, setEmissions) {
     const formula = new co2()
 
-    console.log('Returning %', auditConfig.returning / 100)
-
     const perVisit = formula.perVisitTrace(
         (auditConfig.size * 1000),                          // file size
         auditConfig.greenHosting,                           // green hosting
@@ -17,8 +15,6 @@ function runAudit(auditConfig, setEmissions) {
             returnVisitPercentage: auditConfig.returning / 100
         }
     )
-
-    console.log('results', perVisit)
 
     const emissions = {
         // perVisit : (perVisit).toFixed(2),

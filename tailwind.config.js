@@ -57,8 +57,37 @@ module.exports = {
                 indigo: colors.indigo,
                 yellow: colors.amber,
                 pink: colors.pink,
-                green: colors.emerald,
                 gray: colors.zinc,
+
+                blue: {
+                    DEFAULT: '#0A141F',
+                    50: '#A3C0E1',
+                    100: '#93B6DC',
+                    200: '#74A1D2',
+                    300: '#558CC8',
+                    400: '#3C78B9',
+                    500: '#32649A',
+                    600: '#28507C',
+                    700: '#1E3C5D',
+                    800: '#14283E',
+                    900: '#0A141F',
+                    950: '#03060A'
+                },
+
+                green: {
+                    DEFAULT: '#DBEF80',
+                    50: '#FFFFFF',
+                    100: '#FFFFFF',
+                    200: '#FAFDED',
+                    300: '#F0F8C8',
+                    400: '#E5F4A4',
+                    500: '#DBEF80',
+                    600: '#CDE94E',
+                    700: '#BFE21D',
+                    800: '#95B016',
+                    900: '#6B7F10',
+                    950: '#56660D'
+                },
 
                 // Social media where 500 is default brand color
                 facebook: {

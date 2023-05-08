@@ -57,15 +57,10 @@ function IntensityField(props) {
     const defaultValue = `${defaultGrid.name}||${defaultGrid.emissions_intensity_gco2_per_kwh}`
 
     return (
-        <div className="grid grid-cols-6 items-end w-full">
+        <div className="grid gap-y-3 grid-cols-6 items-end w-full">
 
             <div className="col-span-6 flex flex-row items-end justify-between">
-                <div className="pb-4">
-                    <label htmlFor="carbon-intensity" className="form__label">Carbon Intensity:</label>
-                    {!isBanner ? (
-                        <p className="form__desc">Dolor dolor veniam esse reprehenderit nostrud voluptate dolor amet exercitation. Et est dolor quis proident dolor cillum.</p>
-                    ) : ""}
-                </div>
+                <label htmlFor="carbon-intensity" className="form__label">Carbon Intensity:</label>
                 {/* <div className="">
                     <button onClick={() => { reset() }} className="underline text-xxs underline-offset-2 text-neutral-400 hover:text-neutral-800 focus-visible:border-amber-500 focus-visible:border-b-2 transition-color">Reset to global</button>
                 </div> */}

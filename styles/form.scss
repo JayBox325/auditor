@@ -1,10 +1,18 @@
-input[type=range]::-webkit-slider-thumb {
-    @apply bg-green-500 appearance-none w-6 h-6 rounded-full;
+input[type="range"] {
+    @apply appearance-none overflow-hidden p-1;
+
+    &::-webkit-slider-runnable-track {
+        @apply appearance-none h-full overflow-hidden rounded-md;
+    }
+
+    &::-webkit-slider-thumb {
+        @apply bg-blue w-6 h-full appearance-none rounded-md;
+    }
 }
 
 input,
 select {
-    @apply w-full h-12 rounded-md transition px-4 appearance-none bg-neutral-200 text-neutral-500 border-2 border-neutral-300 focus-within:border-amber-500 xl:h-14;
+    @apply w-full h-12 rounded-md transition px-4 appearance-none bg-neutral-200 text-neutral-800 border-2 border-neutral-300 focus-within:border-amber-500 xl:h-14;
 }
 
 .btn {
@@ -12,9 +20,5 @@ select {
 }
 
 .form__label {
-    @apply font-bold text-lg;
-}
-
-.form__desc {
-    @apply text-gray-400 leading-tight text-sm max-w-lg mt-1;
+    @apply font-medium text-lg;
 }

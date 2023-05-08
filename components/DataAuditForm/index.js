@@ -1,34 +1,13 @@
 import IntensityField from "./IntensityField"
 import ReturningField from "./ReturningField"
 import SizeField from "./SizeField"
-import { useContext } from "react";
-import AuditConfContext from '@/utils/context/AuditConfContext'
-import runAudit from "@/utils/helpers/runAudit"
 import GreenHostingField from "./GreenHostingField"
-import { useRouter } from 'next/router'
 
 function DataAuditForm(props) {
-    const auditConfValue = useContext(AuditConfContext)
-    const router = useRouter()
-
-    // Get context data
-    const {
-        auditConfig,
-        setEmissions
-    } = auditConfValue || {}
-
-    // Run the audit
-    function submitAudit(e) {
-        e.preventDefault()
-        router.push('/result')
-        if(auditConfig.size) {
-            runAudit(auditConfig, setEmissions, )
-        }
-    }
 
     return (
 
-        <form onSubmit={submitAudit} className="flex flex-col justify-between h-full">
+        <div className="flex flex-col justify-between h-full">
             <div>
                 <div className="grid grid-cols-6 gap-6 xl:gap-8 md:grid-cols-12">
 
@@ -57,7 +36,7 @@ function DataAuditForm(props) {
                     <li>Green Hosting: {auditConfig.greenHosting ? 'True' : 'False'}</li>
                 </ul> */}
 
-                <div className="mt-6">
+                {/* <div className="mt-6">
                     <button
                         disabled={auditConfig.size ? false : true}
                         className={`btn ${auditConfig.size ? 'bg-green-500' : 'bg-green-900 border-green-900'}`}
@@ -69,10 +48,10 @@ function DataAuditForm(props) {
                             </div>
                         </div>
                     </button>
-                </div>
+                </div> */}
 
             </div>
-        </form>
+        </div>
     )
 }
 
